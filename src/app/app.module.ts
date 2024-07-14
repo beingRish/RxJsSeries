@@ -9,6 +9,7 @@ import { FooterComponent } from './includes/footer/footer.component';
 import { ObservableComponent } from './observable/observable.component';
 import { ListComponent } from './observable/List/list.component';
 import { FromEventComponent } from './observable/from-event/from-event.component';
+import { IntervalComponent } from './observable/interval/interval.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { FromEventComponent } from './observable/from-event/from-event.component
     ObservableComponent,
     ListComponent,
     FromEventComponent,
+    IntervalComponent,
   ],
   imports: [
     BrowserModule,
