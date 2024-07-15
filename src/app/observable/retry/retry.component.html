@@ -1,0 +1,54 @@
+<div class="m-5">
+    <h2>Retry, RetryWhen, Scan & Delay</h2>
+
+    <h6>Returns an Observable that mirrors the source Observable with the exception of an error.</h6>
+    <br>
+
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Username</th>
+                        <th>Phone</th>
+                        <th>Company</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let p of person">
+                    <tr>
+                        <td>{{p.id}}</td>
+                        <td>{{p.name}}</td>
+                        <td>{{p.email}}</td>
+                        <td>{{p.username}}</td>
+                        <td>{{p.phone}}</td>
+                        <td>{{p.company.name}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <button class="btn btn-primary" type="button" (click)="fetchDetails()">
+        <span *ngIf="fetching" class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+        <span role="status">{{fetching ? 'Fetching...' : 'Fetch Details'}}</span>
+    </button>
+    <br>
+    <br>
+
+    <p>
+        Status : 
+        <strong 
+        [ngClass]="{
+            'text-success': status === 'Data Fetched',
+            'text-danger': status === 'Problem Fetching Data'
+        }">
+            {{status}}
+        </strong>
+        <span *ngIf="fetching" class="spinner-grow spinner-grow-sm text-warning" role="status">
+            <span class="sr-only"></span>
+        </span>
+        
+    </p>
+</div>
