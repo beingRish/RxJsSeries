@@ -20,6 +20,7 @@ import { TapComponent } from './observable/tap/tap.component';
 import { TakeComponent } from './observable/take/take.component';
 import { RetryComponent } from './observable/retry/retry.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DebouncetimeComponent } from './observable/debouncetime/debouncetime.component';
 
 @NgModule({
   declarations: [
@@ -40,11 +41,12 @@ import { HttpClientModule } from '@angular/common/http';
     TapComponent,
     TakeComponent,
     RetryComponent,
+    DebouncetimeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
