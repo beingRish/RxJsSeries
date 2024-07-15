@@ -7,7 +7,7 @@ export class DeisgnUtilityService {
 
   constructor() { }
 
-  print(val: string, containerId: any) {
+  print(val: any, containerId: any) {
     let el = document.createElement('li');
     el.innerText = val;
     
