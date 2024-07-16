@@ -1,9 +1,14 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
+import { BehaviorSubject, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class DeisgnUtilityService {
+export class DeisgnUtilityService{
+
+  exclusive = new Subject<boolean>();
+
+  username = new BehaviorSubject<string>('Rishabh');
 
   constructor() { }
 
