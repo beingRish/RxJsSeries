@@ -1,5 +1,5 @@
 import { Injectable, OnInit } from '@angular/core';
-import { BehaviorSubject, ReplaySubject, Subject } from 'rxjs';
+import { AsyncSubject, BehaviorSubject, ReplaySubject, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +11,8 @@ export class DeisgnUtilityService{
   username = new BehaviorSubject<string>('Rishabh');
 
   videoEmit = new ReplaySubject<string>(3, 5000);
+
+  asyncVideoEmit = new AsyncSubject();
 
   constructor() { }
 
