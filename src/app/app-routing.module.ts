@@ -16,6 +16,7 @@ import { TakeComponent } from './observable/take/take.component';
 import { RetryComponent } from './observable/retry/retry.component';
 import { DebouncetimeComponent } from './observable/debouncetime/debouncetime.component';
 import { SubjectComponent } from './observable/subject/subject.component';
+import { ReplaySubjectComponent } from './observable/replay-subject/replay-subject.component';
 
 const routes: Routes = [
   {path: 'promise', component: PromiseComponent},
@@ -33,7 +34,8 @@ const routes: Routes = [
     {path: 'take', component: TakeComponent},
     {path: 'retry', component: RetryComponent},
     {path: 'debouncetime', component: DebouncetimeComponent},
-    {path: 'subject', component: SubjectComponent}
+    {path: 'subject', component: SubjectComponent},
+    {path: 'replay-subject', component: ReplaySubjectComponent}
   ]},
   {path: '**', redirectTo: 'promise'}
 ];
