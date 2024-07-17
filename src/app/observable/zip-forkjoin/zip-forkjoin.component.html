@@ -1,0 +1,38 @@
+<div class="m-5">
+    <h2>Zip & ForkJoin</h2>
+    <h5>If the last parameter is a function, this function is used to compute the created value from the input values. Otherwise, an array of the input values is returned.</h5>
+    <br>
+
+    <div class="row">
+        <div class="col-md-3 pr-4">
+
+            <strong>Names</strong>
+            <hr>
+            <select class="form-control" #name>
+                <option *ngFor="let item of nameSource" value="{{item}}">
+                    {{item}}
+                </option>
+            </select>
+            <br><br>
+            <strong>Colors</strong>
+            <hr>
+            <select class="form-control" #color>
+                <option *ngFor="let item of colorSource" value="{{item}}">
+                    {{item}}
+                </option>
+            </select>
+        </div>
+
+        <div class="col-md-9 ms-auto">
+            <strong>Zip</strong>
+            <hr>
+            <div class="wrapper" id="elContainer"></div>
+            
+            <br><br>
+
+            <strong>ForkJoin</strong>
+            <hr>
+            <div class="wrapper" id="elContainer2"></div>
+        </div>
+    </div>
+</div>

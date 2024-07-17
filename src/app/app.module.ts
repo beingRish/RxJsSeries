@@ -39,7 +39,8 @@ import { SearchService } from './appServices/search.service';
 import { DeisgnUtilityService } from './appServices/deisgn-utility.service';
 import { ExhaustmapComponent } from './observable/exhaustmap/exhaustmap.component';
 import { ShareReplayComponent } from './observable/share-replay/share-replay.component';
-import { CombineLatestComponent } from './combine-latest/combine-latest.component';
+import { CombineLatestComponent } from './observable/combineLatest/combineLatest.component';
+import { ZipForkjoinComponent } from './observable/zip-forkjoin/zip-forkjoin.component';
 
 @NgModule({
   declarations: [
@@ -77,6 +78,7 @@ import { CombineLatestComponent } from './combine-latest/combine-latest.componen
     ExhaustmapComponent,
     ShareReplayComponent,
     CombineLatestComponent,
+    ZipForkjoinComponent,
   ],
   imports: [
     BrowserModule,

@@ -2,9 +2,9 @@ import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { combineLatest, fromEvent, map, pluck, withLatestFrom } from 'rxjs';
 
 @Component({
-  selector: 'app-combine-latest',
-  templateUrl: './combine-latest.component.html',
-  styleUrls: ['./combine-latest.component.scss']
+  selector: 'app-combineLatest',
+  templateUrl: './combineLatest.component.html',
+  styleUrls: ['./combineLatest.component.scss']
 })
 export class CombineLatestComponent implements AfterViewInit{
 

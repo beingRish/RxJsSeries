@@ -26,7 +26,8 @@ import { MobileNotificationComponent } from './observable/mobile-notification/mo
 import { SwitchmapComponent } from './observable/switchmap/switchmap.component';
 import { SearchFunctionalityusingSwitchmapComponent } from './observable/search-functionalityusing-switchmap/search-functionalityusing-switchmap.component';
 import { ExhaustmapComponent } from './observable/exhaustmap/exhaustmap.component';
-import { CombineLatestComponent } from './combine-latest/combine-latest.component';
+import { CombineLatestComponent } from './observable/combineLatest/combineLatest.component';
+import { ZipForkjoinComponent } from './observable/zip-forkjoin/zip-forkjoin.component';
 
 const routes: Routes = [
   {path: 'promise', component: PromiseComponent},
@@ -55,7 +56,8 @@ const routes: Routes = [
     {path: 'switchmap', component: SwitchmapComponent},
     {path: 'search-functionality', component: SearchFunctionalityusingSwitchmapComponent},
     {path: 'exhaustmap', component: ExhaustmapComponent},
-    {path: 'combineLatest', component: CombineLatestComponent}
+    {path: 'combineLatest', component: CombineLatestComponent},
+    {path: 'zip-forkJoin', component: ZipForkjoinComponent}
   ]},
   {path: '**', redirectTo: 'promise'}
 ];
