@@ -33,6 +33,10 @@ import { MergemapComponent } from './observable/mergemap/mergemap.component';
 import { ConcatMapComponent } from './observable/concat-map/concat-map.component';
 import { MobileNotificationComponent } from './observable/mobile-notification/mobile-notification.component';
 import { SwitchmapComponent } from './observable/switchmap/switchmap.component';
+import { SearchFunctionalityusingSwitchmapComponent } from './observable/search-functionalityusing-switchmap/search-functionalityusing-switchmap.component';
+import { FormsModule } from '@angular/forms';
+import { SearchService } from './appServices/search.service';
+import { DeisgnUtilityService } from './appServices/deisgn-utility.service';
 
 @NgModule({
   declarations: [
@@ -66,13 +70,15 @@ import { SwitchmapComponent } from './observable/switchmap/switchmap.component';
     ConcatMapComponent,
     MobileNotificationComponent,
     SwitchmapComponent,
+    SearchFunctionalityusingSwitchmapComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [DeisgnUtilityService ,SearchService, HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

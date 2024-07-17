@@ -24,6 +24,7 @@ import { MergemapComponent } from './observable/mergemap/mergemap.component';
 import { ConcatMapComponent } from './observable/concat-map/concat-map.component';
 import { MobileNotificationComponent } from './observable/mobile-notification/mobile-notification.component';
 import { SwitchmapComponent } from './observable/switchmap/switchmap.component';
+import { SearchFunctionalityusingSwitchmapComponent } from './observable/search-functionalityusing-switchmap/search-functionalityusing-switchmap.component';
 
 const routes: Routes = [
   {path: 'promise', component: PromiseComponent},
@@ -50,6 +51,7 @@ const routes: Routes = [
     {path: 'concatmap', component: ConcatMapComponent},
     {path: 'mobileNotification', component: MobileNotificationComponent},
     {path: 'switchmap', component: SwitchmapComponent},
+    {path: 'search-functionality', component: SearchFunctionalityusingSwitchmapComponent}
   ]},
   {path: '**', redirectTo: 'promise'}
 ];
