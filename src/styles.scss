@@ -1,6 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import '~bootstrap/dist/css/bootstrap.min.css';
+$red : #ff0000;
+$green: #00FF00;
+$blue: #0000FF;
+$yellow: #FFFF00;
+$violet: #8A2BE2;
+$purple: #800080;
+$grey: #808080;
 
 ul.techList {
     list-style-type: none;
@@ -18,15 +25,15 @@ ul.techList li{
 }
 
 ul.techList.error li{
-    color: red;
+    color: $red;
     background: rgb(255, 0, 0, 0.08);
-    border-color: red;
+    border-color: $red;
 }
 
 ul.techList.completed li{
-    color: green;
+    color: $green;
     background: rgb(61, 216, 67 , 0.08);
-    border-color: green;
+    border-color: $green;
 }
 
 .notification{
@@ -70,4 +77,73 @@ ul.techList.completed li{
     float: right;
     margin:  0 0 0 10px;
     border: 1px solid #989898;
+}
+
+.wrapper {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.wrapper .red{
+    background-color: $red;
+    height: 40px;
+    width: 80px;
+    padding: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.wrapper .green{
+    background-color: $green;
+    height: 40px;
+    width: 80px;
+    padding: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.wrapper .blue{
+    background-color: $blue;
+    height: 40px;
+    width: 80px;
+    padding: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.wrapper .yellow{
+    background-color: $yellow;
+    height: 40px;
+    width: 80px;
+    padding: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.wrapper .violet{
+    background-color: $violet;
+    height: 40px;
+    width: 80px;
+    padding: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.wrapper .purple{
+    background-color: $purple;
+    height: 40px;
+    width: 80px;
+    padding: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.wrapper .grey{
+    background-color: $grey;
+    height: 40px;
+    width: 80px;
+    padding: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
 }

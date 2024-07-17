@@ -1,0 +1,40 @@
+<div class="m-5">
+    <h2>ombineLatest & withLatestFrom</h2>
+    <h5>Combines multiple Observables to create an Observable whose values are calculated from the latest values of each of its input Observables.</h5>
+    <br>
+
+    <div class="row">
+        <div class="col-md-3 pr-4">
+
+            <strong>Names</strong>
+            <hr>
+            <select class="form-control" #name>
+                <option *ngFor="let item of nameSource" value="{{item}}">
+                    {{item}}
+                </option>
+            </select>
+            <br><br>
+            <strong>Colors</strong>
+            <hr>
+            <select class="form-control" #color>
+                <option *ngFor="let item of colorSource" value="{{item}}">
+                    {{item}}
+                </option>
+            </select>
+        </div>
+
+        <div class="col-md-9 ms-auto">
+            <strong>CombineLatest</strong>
+            <hr>
+            <div class="wrapper" id="elContainer">
+            </div>
+            
+            <br><br>
+
+            <strong>withLatestFrom</strong>
+            <hr>
+            <div class="wrapper" id="elContainer2">
+            </div>
+        </div>
+    </div>
+</div>

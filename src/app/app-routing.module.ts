@@ -26,6 +26,7 @@ import { MobileNotificationComponent } from './observable/mobile-notification/mo
 import { SwitchmapComponent } from './observable/switchmap/switchmap.component';
 import { SearchFunctionalityusingSwitchmapComponent } from './observable/search-functionalityusing-switchmap/search-functionalityusing-switchmap.component';
 import { ExhaustmapComponent } from './observable/exhaustmap/exhaustmap.component';
+import { CombineLatestComponent } from './combine-latest/combine-latest.component';
 
 const routes: Routes = [
   {path: 'promise', component: PromiseComponent},
@@ -53,7 +54,8 @@ const routes: Routes = [
     {path: 'mobileNotification', component: MobileNotificationComponent},
     {path: 'switchmap', component: SwitchmapComponent},
     {path: 'search-functionality', component: SearchFunctionalityusingSwitchmapComponent},
-    {path: 'exhaustmap', component: ExhaustmapComponent}
+    {path: 'exhaustmap', component: ExhaustmapComponent},
+    {path: 'combineLatest', component: CombineLatestComponent}
   ]},
   {path: '**', redirectTo: 'promise'}
 ];
