@@ -38,6 +38,7 @@ import { FormsModule } from '@angular/forms';
 import { SearchService } from './appServices/search.service';
 import { DeisgnUtilityService } from './appServices/deisgn-utility.service';
 import { ExhaustmapComponent } from './observable/exhaustmap/exhaustmap.component';
+import { ShareReplayComponent } from './observable/share-replay/share-replay.component';
 
 @NgModule({
   declarations: [
@@ -73,6 +74,7 @@ import { ExhaustmapComponent } from './observable/exhaustmap/exhaustmap.componen
     SwitchmapComponent,
     SearchFunctionalityusingSwitchmapComponent,
     ExhaustmapComponent,
+    ShareReplayComponent,
   ],
   imports: [
     BrowserModule,
