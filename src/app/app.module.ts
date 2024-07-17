@@ -37,6 +37,7 @@ import { SearchFunctionalityusingSwitchmapComponent } from './observable/search-
 import { FormsModule } from '@angular/forms';
 import { SearchService } from './appServices/search.service';
 import { DeisgnUtilityService } from './appServices/deisgn-utility.service';
+import { ExhaustmapComponent } from './observable/exhaustmap/exhaustmap.component';
 
 @NgModule({
   declarations: [
@@ -71,6 +72,7 @@ import { DeisgnUtilityService } from './appServices/deisgn-utility.service';
     MobileNotificationComponent,
     SwitchmapComponent,
     SearchFunctionalityusingSwitchmapComponent,
+    ExhaustmapComponent,
   ],
   imports: [
     BrowserModule,

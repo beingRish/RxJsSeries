@@ -1,0 +1,37 @@
+<div class="m-5">
+    <h2>ExhaustMap</h2>
+    <h5>Maps each value to an Observable, then flattens all of these inner Observables using exhaustAll.</h5>
+    <h5>Projects each source value to an Observable which is merged in the output Observable only if the previous
+        projected Observable has completed.
+
+    </h5>
+    <br>
+
+    <h3>Save Data</h3>
+    <hr>
+
+    <div class="row">
+        <div class="col-md-6 mr-auto">
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <button class="btn btn-success" #btn
+                    >Save Data</button> &nbsp;
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div *ngIf="fetching">
+                <div class="apinner-border text-success text-center" role="status">
+                    <span class="sr-only">Saving...</span>
+                </div>
+            </div>
+            <ul class="video-list">
+                <li class="bg-light border rounded">
+                    <strong>Save Request : </strong> {{saveRequest}}
+                </li>
+            </ul>
+
+            
+        </div>
+    </div>
+</div>
