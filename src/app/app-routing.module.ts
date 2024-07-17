@@ -23,6 +23,7 @@ import { MergeComponent } from './observable/merge/merge.component';
 import { MergemapComponent } from './observable/mergemap/mergemap.component';
 import { ConcatMapComponent } from './observable/concat-map/concat-map.component';
 import { MobileNotificationComponent } from './observable/mobile-notification/mobile-notification.component';
+import { SwitchmapComponent } from './observable/switchmap/switchmap.component';
 
 const routes: Routes = [
   {path: 'promise', component: PromiseComponent},
@@ -47,7 +48,8 @@ const routes: Routes = [
     {path: 'merge', component: MergeComponent},
     {path: 'mergemap', component: MergemapComponent},
     {path: 'concatmap', component: ConcatMapComponent},
-    {path: 'mobileNotification', component: MobileNotificationComponent}
+    {path: 'mobileNotification', component: MobileNotificationComponent},
+    {path: 'switchmap', component: SwitchmapComponent},
   ]},
   {path: '**', redirectTo: 'promise'}
 ];

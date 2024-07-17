@@ -32,6 +32,7 @@ import { MergeComponent } from './observable/merge/merge.component';
 import { MergemapComponent } from './observable/mergemap/mergemap.component';
 import { ConcatMapComponent } from './observable/concat-map/concat-map.component';
 import { MobileNotificationComponent } from './observable/mobile-notification/mobile-notification.component';
+import { SwitchmapComponent } from './observable/switchmap/switchmap.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +65,7 @@ import { MobileNotificationComponent } from './observable/mobile-notification/mo
     MergemapComponent,
     ConcatMapComponent,
     MobileNotificationComponent,
+    SwitchmapComponent,
   ],
   imports: [
     BrowserModule,
