@@ -28,6 +28,7 @@ import { SearchFunctionalityusingSwitchmapComponent } from './observable/search-
 import { ExhaustmapComponent } from './observable/exhaustmap/exhaustmap.component';
 import { CombineLatestComponent } from './observable/combineLatest/combineLatest.component';
 import { ZipForkjoinComponent } from './observable/zip-forkjoin/zip-forkjoin.component';
+import { ShareReplayComponent } from './observable/share-replay/share-replay.component';
 
 const routes: Routes = [
   {path: 'promise', component: PromiseComponent},
@@ -56,6 +57,7 @@ const routes: Routes = [
     {path: 'switchmap', component: SwitchmapComponent},
     {path: 'search-functionality', component: SearchFunctionalityusingSwitchmapComponent},
     {path: 'exhaustmap', component: ExhaustmapComponent},
+    {path: 'shareReplay', component: ShareReplayComponent},
     {path: 'combineLatest', component: CombineLatestComponent},
     {path: 'zip-forkJoin', component: ZipForkjoinComponent}
   ]},
