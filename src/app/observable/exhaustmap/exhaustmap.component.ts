@@ -11,10 +11,10 @@ export class ExhaustmapComponent implements AfterViewInit{
 
   constructor(private http: HttpClient){}
 
-  url = 'https://jsonplaceholder.typicode.com/posts/1'
+  url = 'https://rxjs-rish-default-rtdb.firebaseio.com/exhaustMap.json'
 
   num = 0;
-  saveRequest:any;
+  saveRequest = 0;
   fetching = false;
 
   @ViewChild('btn') btn! : ElementRef ;
@@ -32,12 +32,18 @@ export class ExhaustmapComponent implements AfterViewInit{
   }
 
   onSave(changes: any){
-    return this.http.patch(this.url, { data: changes });
+    return this.http.put(this.url, { data: changes });
   }
 
   onFetch() {
     this.http.get<any>(this.url).pipe(
-    ).subscribe(res => this.saveRequest = res.data
+    ).subscribe(res => {
+      console.log(res.data);
+      
+      this.saveRequest = res.data
+      console.log(this.saveRequest);
+      
+    }
     
     )}
 

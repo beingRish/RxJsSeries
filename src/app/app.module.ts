@@ -41,6 +41,11 @@ import { ExhaustmapComponent } from './observable/exhaustmap/exhaustmap.componen
 import { ShareReplayComponent } from './observable/share-replay/share-replay.component';
 import { CombineLatestComponent } from './observable/combineLatest/combineLatest.component';
 import { ZipForkjoinComponent } from './observable/zip-forkjoin/zip-forkjoin.component';
+import { CatcherrorThrowerrorComponent } from './observable/catcherror-throwerror/catcherror-throwerror.component';
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from 'src/environments/environment';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
 @NgModule({
   declarations: [
@@ -79,12 +84,16 @@ import { ZipForkjoinComponent } from './observable/zip-forkjoin/zip-forkjoin.com
     ShareReplayComponent,
     CombineLatestComponent,
     ZipForkjoinComponent,
+    CatcherrorThrowerrorComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFirestoreModule
   ],
   providers: [DeisgnUtilityService ,SearchService, HttpClientModule],
   bootstrap: [AppComponent]
