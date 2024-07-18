@@ -2,47 +2,82 @@
     <h2>ShareReplay</h2>
     <h5>Share source and replay specified number of emissions on subscription.</h5>
     <br>
-    <div class="row" *ngFor="let items of allProducts">
-        <div class="col-md-6">
+
+
+    <div class="row gap-5">
+        <div class="col-md-3">
             <strong>Products :
                 <span class="text-primary">Laptop</span>
             </strong>
+
             <hr>
-            <div class="row">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top"
-                        [src]="items.imgUrl">
+
+            <div class="row" *ngFor="let items of laptops | async">
+                <div class="card">
+                    <img [src]="items.imgUrl" class="card-img-top">
                     <div class="card-body">
-                        <span>Id: {{items.id}}</span>
-                        <h5 class="card-title">{{img.description}}</h5><br>
-                        <h6>{{img.type}}</h6>
-                        <p class="card-text">{{img.}}</p>
-                        <strong>1,49,489.99</strong>
-                        <a href="#" class="btn btn-primary">Buy Now</a>
+                        <small>Id: {{items.id}}</small>
+                        <h5 class="card-title">{{items.name}}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">{{items.type}}</h6>
+                        <p class="card-text">{{items.description}}</p>
+                        <div class="d-flex align-items-center">
+                            <strong>Price: {{items.price}}</strong>
+                            <a href="#" class="btn btn-dark btn-sm ml-auto">Buy Now</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="col-md-6">
-            <strong>Products :
-                <span class="text-primary">Mobile</span>
+        <div class="col-md-3">
+            <strong>
+                <span class="text-warning">Mobile</span>
             </strong>
+
             <hr>
-            <div class="row">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top"
-                        src="https://d2xamzlzrdbdbn.cloudfront.net/products/504a7e3e-d1c5-4875-ba36-5ceed210345024181103_182x182.jpg">
+
+            <div class="row" *ngFor="let items of mobiles | async">
+                <div class="card">
+                    <img [src]="items.imgUrl" class="card-img-top">
                     <div class="card-body">
-                        <span>Id: p2</span>
-                        <h5 class="card-title">Samsung</h5><br>
-                        <h6>Mobile</h6>
-                        <p class="card-text">Samsung Galaxy S Series S24 Ultra 5G Dual Sim Smartphone (12GB RAM,256GB Storage) 6.8 inch QHD+ AMOLED Display| Snapdragon 8 Gen 3 (Titanium Grey)</p>
-                        <strong>45000</strong>
-                        <a href="#" class="btn btn-primary">Buy Now</a>
+                        <small>Id: {{items.id}}</small>
+                        <h5 class="card-title">{{items.name}}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">{{items.type}}</h6>
+                        <p class="card-text">{{items.description}}</p>
+                        <div class="d-flex align-items-center">
+                            <strong>Price: {{items.price}}</strong>
+                            <a href="#" class="btn btn-dark btn-sm ml-auto">Buy Now</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="row all-products">
+            <div class="col-md-12">
+                <strong>All Products</strong>
+                <hr>
+
+                <div class="row">
+                    <div class="col-md-3" *ngFor="let items of allProducts | async">
+                        <div class="card">
+                            <img [src]="items.imgUrl" class="card-img-top">
+                            <div class="card-body">
+                                <small>Id: {{items.id}}</small>
+                                <h5 class="card-title">{{items.name}}</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">{{items.type}}</h6>
+                                <p class="card-text">{{items.description}}</p>
+                                <div class="d-flex align-items-center">
+                                    <strong>Price: {{items.price}}</strong>
+                                    <a href="#" class="btn btn-dark btn-sm ml-auto">Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </div>
 </div>

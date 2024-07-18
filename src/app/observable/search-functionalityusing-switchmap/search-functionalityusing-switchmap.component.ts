@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { debounceTime, distinctUntilChanged, filter, pluck, switchMap } from 'rxjs';
+import { debounceTime, distinctUntilChanged, filter, map, pluck, switchMap } from 'rxjs';
 import { Search } from 'src/app/appInterface/search.interface';
 import { SearchService } from 'src/app/appServices/search.service';
 
@@ -24,7 +24,7 @@ export class SearchFunctionalityusingSwitchmapComponent implements AfterViewInit
     formValue?.pipe(
       // map(data => data['searchTerm'])
       filter(() => this.searchForm?.valid === true),
-      pluck('searchTerm'),
+      pluck('searchTerm'),      
       debounceTime(500),
       distinctUntilChanged(),
       switchMap(data => this._searchService.getSearches(data))
