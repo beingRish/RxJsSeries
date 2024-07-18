@@ -2,4 +2,47 @@
     <h2>ShareReplay</h2>
     <h5>Share source and replay specified number of emissions on subscription.</h5>
     <br>
+    <div class="row" *ngFor="let items of allProducts">
+        <div class="col-md-6">
+            <strong>Products :
+                <span class="text-primary">Laptop</span>
+            </strong>
+            <hr>
+            <div class="row">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top"
+                        [src]="items.imgUrl">
+                    <div class="card-body">
+                        <span>Id: {{items.id}}</span>
+                        <h5 class="card-title">{{img.description}}</h5><br>
+                        <h6>{{img.type}}</h6>
+                        <p class="card-text">{{img.}}</p>
+                        <strong>1,49,489.99</strong>
+                        <a href="#" class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <strong>Products :
+                <span class="text-primary">Mobile</span>
+            </strong>
+            <hr>
+            <div class="row">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top"
+                        src="https://d2xamzlzrdbdbn.cloudfront.net/products/504a7e3e-d1c5-4875-ba36-5ceed210345024181103_182x182.jpg">
+                    <div class="card-body">
+                        <span>Id: p2</span>
+                        <h5 class="card-title">Samsung</h5><br>
+                        <h6>Mobile</h6>
+                        <p class="card-text">Samsung Galaxy S Series S24 Ultra 5G Dual Sim Smartphone (12GB RAM,256GB Storage) 6.8 inch QHD+ AMOLED Display| Snapdragon 8 Gen 3 (Titanium Grey)</p>
+                        <strong>45000</strong>
+                        <a href="#" class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

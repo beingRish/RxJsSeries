@@ -1,0 +1,26 @@
+[
+    {
+        "description": "13th Gen Intel® Core™ i7-13650HX (24 MB cache, 14 cores, 20 threads, up to 4.90 GHz Turbo)",
+        "id": "p1",
+        "imgUrl": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/g-series/g16-7630/media-gallery/black/notebook-g16-7630-nt-black-gallery-1.psd?fmt=png-alpha&pscan=auto&scl=1&wid=3500&hei=2625&qlt=100,1&resMode=sharp2&size=3500,2625&chrss=full&imwidth=5000",
+        "name": "G16 Gaming Laptop - Dell",
+        "price": "1,49,489.99",
+        "type": "mobile"
+    },
+    {
+        "description": "Samsung Galaxy S Series S24 Ultra 5G Dual Sim Smartphone (12GB RAM,256GB Storage) 6.8 inch QHD+ AMOLED Display| Snapdragon 8 Gen 3 (Titanium Grey)",
+        "id": "p2",
+        "imgUrl": "https://d2xamzlzrdbdbn.cloudfront.net/products/504a7e3e-d1c5-4875-ba36-5ceed210345024181103_182x182.jpg",
+        "name": "Samsung",
+        "price": "45000",
+        "type": "Mobile"
+    },
+    {
+        "description": "Fossil Men Leather Grant Sport Analog Blue Dial Watch-Fs5237, Band Color-Blue",
+        "id": "p3",
+        "imgUrl": "sdskf dklksdhttps://m.media-amazon.com/images/I/81Q7WuKlezL._SX679_.jpg",
+        "name": "Dial Watch",
+        "price": 7598,
+        "type": "watch"
+    }
+]
