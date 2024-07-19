@@ -1,10 +1,13 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable, OnInit } from '@angular/core';
-import { AsyncSubject, BehaviorSubject, ReplaySubject, Subject } from 'rxjs';
+import { AsyncSubject, BehaviorSubject, Observable, ReplaySubject, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DeisgnUtilityService{
+
+  productsUrl = 'https://rxjs-sharereplay-default-rtdb.firebaseio.com/';
 
   exclusive = new Subject<boolean>();
 
@@ -14,7 +17,7 @@ export class DeisgnUtilityService{
 
   asyncVideoEmit = new AsyncSubject();
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   print(val: any, containerId: any) {
     let el = document.createElement('li');
@@ -29,5 +32,9 @@ export class DeisgnUtilityService{
     el.innerHTML = val;
     
     document.getElementById(containerId)?.prepend(el);
+  }
+
+  getProducts() : Observable<any> {
+    return this.http.get<any>(this.productsUrl)
   }
 }

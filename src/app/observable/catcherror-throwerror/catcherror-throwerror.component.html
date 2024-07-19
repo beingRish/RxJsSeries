@@ -1,1 +1,49 @@
-<p>catcherror-throwerror works!</p>
+<div class="m-5">
+    <h2>CatchError & ThrowError</h2>
+    <br>
+
+    <div *ngIf="error" class="alert alert-danger alert-dismissible fade show">
+        <strong>Error : </strong> {{error}} ? {{error}} : {{stringError}} 
+        <button 
+            type="button" 
+            class="close" 
+            data-dismiss="alert"
+            aria-label="Close"
+            (click)="closeError()"
+        >
+            <span aria-hidden>&times;</span>
+        </button>
+    </div>
+
+    <div class="row">
+        <div class="row all-products">
+            <div class="col-md-12">
+                <strong>Products</strong>
+                <hr>
+
+                <div>
+                    <button class="btn btn-primary" (click)="onGetProducts()">Get Products</button>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4" *ngFor="let items of allProducts">
+                        <div class="card">
+                            <img [src]="items.imgUrl" class="card-img-top">
+                            <div class="card-body">
+                                <small>Id: {{items.id}}</small>
+                                <h5 class="card-title text-primary">{{items.name}}</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">{{items.type}}</h6>
+                                <p class="card-text">{{items.description}}</p>
+                                <div class="d-flex align-items-center">
+                                    <strong class="text-primary">Price: {{items.price}}</strong>
+                                    <a href="#" class="btn btn-primary btn-sm ml-auto">Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -29,6 +29,7 @@ import { ExhaustmapComponent } from './observable/exhaustmap/exhaustmap.componen
 import { CombineLatestComponent } from './observable/combineLatest/combineLatest.component';
 import { ZipForkjoinComponent } from './observable/zip-forkjoin/zip-forkjoin.component';
 import { ShareReplayComponent } from './observable/share-replay/share-replay.component';
+import { CatcherrorThrowerrorComponent } from './observable/catcherror-throwerror/catcherror-throwerror.component';
 
 const routes: Routes = [
   {path: 'promise', component: PromiseComponent},
@@ -59,7 +60,8 @@ const routes: Routes = [
     {path: 'exhaustmap', component: ExhaustmapComponent},
     {path: 'shareReplay', component: ShareReplayComponent},
     {path: 'combineLatest', component: CombineLatestComponent},
-    {path: 'zip-forkJoin', component: ZipForkjoinComponent}
+    {path: 'zip-forkJoin', component: ZipForkjoinComponent},
+    {path: 'catchError', component: CatcherrorThrowerrorComponent}
   ]},
   {path: '**', redirectTo: 'promise'}
 ];
