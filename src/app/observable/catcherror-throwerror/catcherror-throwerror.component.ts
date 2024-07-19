@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DeisgnUtilityService } from 'src/app/appServices/deisgn-utility.service';
+import { ErrorService } from 'src/app/appServices/error.service';
 
 @Component({
   selector: 'app-catcherror-throwerror',
@@ -10,10 +11,11 @@ export class CatcherrorThrowerrorComponent implements OnInit{
 
   fetching = false;
   allProducts : any;
-  error = false;
-  stringError = '';
+  errMsg = '';
 
-  constructor(private _du : DeisgnUtilityService){}
+  constructor(
+    private _du : DeisgnUtilityService,
+  ){}
 
   ngOnInit(): void {}
 
@@ -25,22 +27,14 @@ export class CatcherrorThrowerrorComponent implements OnInit{
         this.fetching = false;
       },
       (err) => {
-        console.log(err);
-        if(!err.error || err.error.error){
-          console.log('Nework Error');
-          
-          this.stringError = 'Unknown Error';
-
-        }else{
-          this.error = err.error.error
-        }
+        this.errMsg = err;
         this.fetching = false;
         
       });
   }
 
   closeError(){
-    this.error = false;
+    this.errMsg = '';
   }
 
 }

@@ -2,8 +2,8 @@
     <h2>CatchError & ThrowError</h2>
     <br>
 
-    <div *ngIf="error" class="alert alert-danger alert-dismissible fade show">
-        <strong>Error : </strong> {{error}} ? {{error}} : {{stringError}} 
+    <div *ngIf="errMsg!==''" class="alert alert-danger alert-dismissible fade show">
+        <strong>Error : </strong> {{errMsg}}
         <button 
             type="button" 
             class="close" 
@@ -21,11 +21,12 @@
                 <strong>Products</strong>
                 <hr>
 
-                <div>
-                    <button class="btn btn-primary" (click)="onGetProducts()">Get Products</button>
-                </div>
+                <button class="btn btn-primary mb-3" type="button" (click)="onGetProducts()">
+                    <span *ngIf="fetching" class="spinner-border spinner-border-sm " aria-hidden="true"></span>
+                    <span role="status">{{fetching ? 'Getting...' : 'Get Products'}}</span>
+                </button>
 
-                <div class="row">
+                <div *ngIf="errMsg==''" class="row">
                     <div class="col-md-4" *ngFor="let items of allProducts">
                         <div class="card">
                             <img [src]="items.imgUrl" class="card-img-top">

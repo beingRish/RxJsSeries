@@ -147,3 +147,17 @@ ul.techList.completed li{
     margin-right: 5px;
     margin-left: 5px;
 }
+
+.close {
+    position: absolute;
+    right: 0;
+    color: inherit;
+    border: none;
+    background: transparent;
+    margin-right: 10px;
+}
+
+.close:hover {
+    opacity: 1; /* Optional: Full opacity on hover */
+}
+
