@@ -7,15 +7,12 @@ import { DeisgnUtilityService } from 'src/app/appServices/deisgn-utility.service
   templateUrl: './from-event.component.html',
   styleUrls: ['./from-event.component.scss']
 })
-export class FromEventComponent implements OnInit, AfterViewInit{
+export class FromEventComponent implements AfterViewInit{
 
   constructor(private _designUtility: DeisgnUtilityService) {}
   
   @ViewChild('addBtn') addBtn!:ElementRef;
 
-  ngOnInit(): void {
-
-  }
 
   ngAfterViewInit(): void {
     let count = 1;
